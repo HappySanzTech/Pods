@@ -24,6 +24,7 @@ PODS:
   - HMSegmentedControl (1.5.4)
   - LSFloatingActionMenu (1.0.0)
   - MBProgressHUD (1.0.0)
+  - OpenSSL-Universal (1.0.2.13)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - HMSegmentedControl
   - LSFloatingActionMenu (~> 1.0.0)
   - MBProgressHUD (~> 1.0.0)
+  - OpenSSL-Universal
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -40,7 +42,8 @@ SPEC CHECKSUMS:
   HMSegmentedControl: b25bc4ec44766e073d62c473188fb354ee244b76
   LSFloatingActionMenu: dc2d6449e817cb2eb3c3a9a751bd49c3aae416b2
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  OpenSSL-Universal: 401888162f11c33ebbd46f782d9229da35c61327
 
-PODFILE CHECKSUM: 8882d3368f031e2dafd2974e4277f5cdc036ed0d
+PODFILE CHECKSUM: e1ecace754b80a53a315da68eda9fb219aec7401
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1
