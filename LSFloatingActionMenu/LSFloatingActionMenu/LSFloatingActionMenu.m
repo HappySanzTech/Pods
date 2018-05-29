@@ -15,7 +15,7 @@ static NSString * const kLSKeyAnimationGroupID = @"AnimationGroupID";
 static NSString * const kLSKeyFirstAnimationGroupValue = @"FirstAnimationGroup";
 static NSString * const kLSKeyLastAnimationGroupValue = @"LastAnimationGroup";
 
-@interface LSFloatingActionMenu () <LSFloatingActionMenuItemDelegate>
+@interface LSFloatingActionMenu () <LSFloatingActionMenuItemDelegate,CAAnimationDelegate>
 
 @property (nonatomic, assign) LSFloatingActionMenuDirection direction;
 @property (nonatomic, copy) NSArray *menuItems;
