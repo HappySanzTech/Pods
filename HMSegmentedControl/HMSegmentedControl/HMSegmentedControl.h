@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlSelectionStyle) {
 typedef NS_ENUM(NSInteger, HMSegmentedControlSelectionIndicatorLocation) {
     HMSegmentedControlSelectionIndicatorLocationUp,
     HMSegmentedControlSelectionIndicatorLocationDown,
-	HMSegmentedControlSelectionIndicatorLocationNone // No selection indicator
+    HMSegmentedControlSelectionIndicatorLocationNone // No selection indicator
 };
 
 typedef NS_ENUM(NSInteger, HMSegmentedControlSegmentWidthStyle) {
@@ -46,7 +46,15 @@ enum {
 typedef NS_ENUM(NSInteger, HMSegmentedControlType) {
     HMSegmentedControlTypeText,
     HMSegmentedControlTypeImages,
-	HMSegmentedControlTypeTextImages
+    HMSegmentedControlTypeTextImages
+};
+
+typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
+    HMSegmentedControlImagePositionBehindText,
+    HMSegmentedControlImagePositionLeftOfText,
+    HMSegmentedControlImagePositionRightOfText,
+    HMSegmentedControlImagePositionAboveText,
+    HMSegmentedControlImagePositionBelowText
 };
 
 @interface HMSegmentedControl : UIControl
@@ -159,6 +167,20 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlType) {
 @property (nonatomic, assign) HMSegmentedControlBorderType borderType;
 
 /**
+ Specifies the image position relative to the text. Only applicable for HMSegmentedControlTypeTextImages
+ 
+ Default is `HMSegmentedControlImagePositionBehindText`
+ */
+@property (nonatomic) HMSegmentedControlImagePosition imagePosition;
+
+/**
+ Specifies the distance between the text and the image. Only applicable for HMSegmentedControlTypeTextImages
+ 
+ Default is `0,0`
+ */
+@property (nonatomic) CGFloat textImageSpacing;
+
+/**
  Specifies the border color.
  
  Default is `[UIColor blackColor]`
@@ -187,6 +209,8 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlType) {
  */
 @property(nonatomic, getter = isVerticalDividerEnabled) BOOL verticalDividerEnabled;
 
+@property (nonatomic, getter=shouldStretchSegmentsToScreenSize) BOOL stretchSegmentsToScreenSize;
+
 /**
  Index of the currently selected segment.
  */
@@ -208,9 +232,9 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlType) {
  When HMSegmentedControlSelectionIndicatorLocationDown is selected, top edge insets are not used
  
  Defaults are top: 0.0f
-             left: 0.0f
-           bottom: 0.0f
-            right: 0.0f
+ left: 0.0f
+ bottom: 0.0f
+ right: 0.0f
  */
 @property (nonatomic, readwrite) UIEdgeInsets selectionIndicatorEdgeInsets;
 
@@ -236,3 +260,4 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlType) {
 - (void)setTitleFormatter:(HMTitleFormatterBlock)titleFormatter;
 
 @end
+

@@ -18,7 +18,7 @@ static NSString * const kLSKeyLastAnimationGroupValue = @"LastAnimationGroup";
 @interface LSFloatingActionMenu () <LSFloatingActionMenuItemDelegate,CAAnimationDelegate>
 
 @property (nonatomic, assign) LSFloatingActionMenuDirection direction;
-@property (nonatomic, copy) NSArray *menuItems;
+@property (nonatomic, copy) NSArray *menuItems,*imageArray;
 @property (nonatomic, copy) void (^menuHandler)(LSFloatingActionMenuItem *item, NSUInteger index);
 @property (nonatomic, copy) void (^closeHandler)(void);
 
